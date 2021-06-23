@@ -26,20 +26,21 @@ CREATE TABLE IF NOT EXISTS `contactos` (
   `fechaNacimiento` date NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `telefono` int NOT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`idContacto`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla db_agenda.contactos: ~8 rows (aproximadamente)
 /*!40000 ALTER TABLE `contactos` DISABLE KEYS */;
-INSERT INTO `contactos` (`idContacto`, `nombre`, `apellido`, `edad`, `fechaNacimiento`, `email`, `telefono`) VALUES
-	(1, 'matias', 'perez', 46, '1995-06-07', 'contacto1@gmail.com', 45698740),
-	(4, 'paula', 'torres', 67, '1995-07-06', 'analiat@gmail.com', 65347890),
-	(6, 'matias', 'pereira', 32, '1992-06-28', 'contactos@gmail.com', 85476312),
-	(7, 'natalia', 'diaz', 45, '2000-10-26', 'diaz@gmail.com', 20169034),
-	(9, 'pablo', 'sarmiento', 14, '1976-06-24', 'juan@gmail.com', 1578420390),
-	(11, 'lautaro', 'romano', 23, '2000-02-06', 'lautaror@gmail.com', 1547963210),
-	(12, 'samanta', 'ceballos', 56, '1925-03-31', 'samantac@gmail.com', 32479651),
-	(13, 'laura', 'moron', 32, '2005-09-13', 'laurai�igez@gmail.com', 1520221450);
+INSERT INTO `contactos` (`idContacto`, `nombre`, `apellido`, `edad`, `fechaNacimiento`, `email`, `telefono`, `estado`) VALUES
+	(1, 'matias', 'perez', 46, '1995-06-07', 'contacto1@gmail.com', 45698740, 1),
+	(4, 'paula', 'torres', 67, '1995-07-06', 'analiat@gmail.com', 65347890, 1),
+	(6, 'matias', 'pereira', 32, '1992-06-28', 'contactos@gmail.com', 85476312, 1),
+	(7, 'natalia', 'diaz', 45, '2000-10-26', 'diaz@gmail.com', 20169034, 1),
+	(9, 'pablo', 'sarmiento', 14, '1976-06-24', 'juan@gmail.com', 1578420390, 0),
+	(11, 'lautaro', 'romano', 23, '2000-02-06', 'lautaror@gmail.com', 1547963210, 0),
+	(12, 'samanta', 'ceballos', 56, '1925-03-31', 'samantac@gmail.com', 32479651, 1),
+	(13, 'laura', 'moron', 32, '2005-09-13', 'laurai�igez@gmail.com', 1520221450, 0);
 /*!40000 ALTER TABLE `contactos` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
